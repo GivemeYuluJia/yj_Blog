@@ -1,0 +1,11 @@
+{
+  "name": "npm-learn",
+  "version": "1.0.0",
+  "description": "learn npm",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node index.js"
+  },
+  "author": " <1095778225@qq.com>",
+  "license": "ISC"
+}
