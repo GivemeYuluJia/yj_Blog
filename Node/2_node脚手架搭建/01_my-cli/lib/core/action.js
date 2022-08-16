@@ -1,4 +1,5 @@
 const inquirer = require('inquirer');
+const downloadFun = require("./download");
 const config = require("../../config");
 
 const myAction = async (project, args) => {
@@ -15,6 +16,8 @@ const myAction = async (project, args) => {
     }
   ])
   console.log(answer);
+  // 下载代码模块
+  downloadFun(config.framworkUrl[answer.framwork], project)
 };
 
 module.exports = myAction;
