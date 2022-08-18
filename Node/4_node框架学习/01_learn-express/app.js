@@ -8,6 +8,8 @@ const app = express();
 // 解析客户端传入数据格式
 app.use(express.json());
 app.use(express.urlencoded());
+// 处理静态文件
+app.use(express.static('public'));
 // 跨域
 app.use(cors());
 // 日志
