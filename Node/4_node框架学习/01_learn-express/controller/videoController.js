@@ -1,5 +1,6 @@
 const { Video, Videocomment, Videolike } = require("../model/index");
 const { symbolUserKey } = require("../config/config.default");
+const { hotInc, topHots } = require('../model/redis/redishotsinc')
 
 // 上传视频
 module.exports.createVideo = async (req, res, next) => {
@@ -213,4 +214,39 @@ module.exports.likeVideoList = async (req, res) => {
     user: req[symbolUserKey].userInfo.id
   })
   res.status(200).josn({ list: like, total })
+}
+
+// 观看+1 点赞+2 评论+2  收藏+3 
+module.exports.collect = async (req, res) => {
+  const videoId = req.params.videoId;
+  const userId = req[symbolUserKey].userInfo.id;
+
+  const video = await Video.findById(videoId);
+  if (!video) {
+    return res.status(404).json({ err: '视频不存在' })
+  }
+  var doc = await collectModel.findOne({
+    user: userId,
+    video: videoId
+  });
+  if (doc) {
+    return res.status(403).json({ err: '视频以被收藏' })
+  }
+  const mycollect = await collectModel({
+    user: userId,
+    video: videoId
+  }).save();
+
+  if (mycollect) {
+    await hotInc(videoId, 3)
+  }
+
+  res.status(201).json({ mycollect })
+}
+
+// 获取topnum条热门视频
+exports.getHots = async (req, res) => {
+  var topnum = req.params.topnum
+  var tops = await topHots(topnum)
+  res.status(200).json({tops})
 }

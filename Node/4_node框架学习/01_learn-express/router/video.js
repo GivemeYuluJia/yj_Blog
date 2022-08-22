@@ -15,4 +15,5 @@ router.post('/createVideo', verifyToken(), videoValidator, videoController.creat
 .get('/likeVideo/:videoId', verifyToken(), videoController.likeViode)
 .get('/dislikeVideo/:videoId', verifyToken(), videoController.dislikeVideo)
 .post('/likeVideoList/:videoId', verifyToken(), videoController.likeVideoList)
+.get('/collect/:videoId', verifyToken(), videoController.collect)
 module.exports = router;
