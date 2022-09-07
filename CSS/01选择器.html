@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS 选择器</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      width: 100px;
+    }
+    /** 类选择器 */
+    .box {
+      height: 100px;
+    }
+  </style>
+</head>
+<body>
+  <!-- 寻找特定类型的元素时，元素选择器都会匹配该文档中所有此类型的元素 -->
+  <h1>类型选择器(元素选择器)</h1>
+
+  <!-- 一个星号 (*) 就是一个通配选择器 -->
+  <!-- 它可以匹配任意类型的 HTML 元素。在配合其他简单选择器的时候，省略掉通配选择器会有同样的效果 -->
+  <!-- 比如，*.warning 和.warning 的效果完全相同。 -->
+  <div>通配选择器</div>
+
+  <!-- CSS 类选择器会根据元素的类属性中的内容匹配元素。-->
+  <!-- 类属性被定义为一个以空格分隔的列表项，在这组类名中，必须有一项与类选择器中的类名完全匹配，此条样式声明才会生效 -->
+  <div class="box">类选择器</div>
+</body>
+</html>

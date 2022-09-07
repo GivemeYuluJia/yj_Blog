@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>文本属性</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    .box {
+      margin: auto;
+      margin-top: 50px;
+      width: 150px;
+      height: 150px;
+      border: 1px solid black;
+    }
+    .text {
+      text-decoration: underline;
+      text-align: center;
+      text-transform: capitalize;
+      text-shadow: 10px 10px 1px red;
+    }
+  </style>
+</head>
+<body>
+  <!-- 
+    text-shadow 为文字添加阴影; 4个属性如下：
+     - 阴影与原始文本的水平偏移，可以使用大多数的 CSS 单位 length and size units, 但是 px 是比较合适的。这个值必须指定。
+     - 阴影与原始文本的垂直偏移;效果基本上就像水平偏移，除了它向上/向下移动阴影，而不是左/右。这个值必须指定。
+     - 模糊半径 - 更高的值意味着阴影分散得更广泛。如果不包含此值，则默认为 0，这意味着没有模糊。可以使用大多数的 CSS 单位 length and size units.
+     - 阴影的基础颜色，可以使用大多数的 CSS 颜色单位 CSS color unit. 如果没有指定，默认为 black.
+
+
+    1. text-decoration 文本装饰线 规定添加到文本的修饰，下划线、上划线、删除线等
+       是text-decoration-line、text-decoration-color、text-decoration-style简写
+      - underline 定义文本下的一条线
+      - overline 定义文本上一条线
+      - line-through 定义穿过文本下的一条线
+      - blink 定义闪烁的文本
+      -inherit 规定从父元素继承text-decoration属性的值
+
+    2. text-align 定义行内内容（例如文字）如何相对它的块父元素对齐
+      - left 行内内容向左侧边对齐
+      - right 行内内容向右侧边对齐
+      - center 行内内容居中
+      - justify 文字向两侧对齐，对最后一行无效
+
+    3. text-transform 允许你设置要转换的字体
+      - uppercase 将所有文本转为大写
+      - lowercase 将所有文本转为小写
+      - capitalize 将所有单词让其首字母大写
+    
+    4. letter-spacing\word-spacing 允许你设置你的文本中的字母与字母之间的间距/单词与单词之间的间距
+  -->
+  <div class="box">
+    <div class="text">
+      文本属性学习 - learn text attribute
+    </div>
+  </div>
+</body>
+</html>
