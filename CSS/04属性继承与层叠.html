@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>属性的继承与层叠</title>
+  <style>
+    .box {
+      color: aqua;
+    }
+  </style>
+</head>
+<body>
+  <!-- 继承 —— 如果一个属性具有继承性 那么在该元素上设置后 其后代元素都可以继承这个属性 -->
+  <!-- 如果后代元素自己有设置该属性 那么优先使用后代元素自己的属性 继承过来的是计算值-->
+  <!-- 通过inhert来继承父元素属性 -->
+  <!-- 常见如 color、font-size、text-align、line-heigh一般和文本字体相关都可以继承 -->
+
+  <!-- 层叠 —— 相同属性通过不同的选择器给它进行多次设置 那么属性会被一层层覆盖上去 最终只有一个生效 -->
+  <!-- 选择器的权重 权重大的生效 根据权重判断出优先级 (权重可以累加) -->
+  <!-- 先后顺序 权重相同时 后面设置的生效 -->
+  <!-- 权重大小 !important10000 > 内联样式1000 > id选择器100 > 类\伪\属性类选择器10 > 元素选择器1 > 通配符 -->
+  <div class="box">
+    <h1>h1元素</h1>
+    <p>
+      p元素
+      <span>p元素中span元素</span>
+    </p>
+    <span>span元素</span>
+  </div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML元素类型</title>
+</head>
+<body>
+  <!-- h1/div/span/a/img -->
+  <!-- 某些元素非常重: 独占父元素一行 -> 块级元素(block): h1/p/div -->
+  <!-- 某些元素属于内容一部分 不需要独占一行 和其他内容在同一行 -> 行内元素: a/img/span -->
+  <!--
+    display 可以设置元素的内部和外部显示类型
+      - block 设置为块级元素
+      - inline 设置为行内元素 行内元素无法设置宽 高宽高默认由内容决定 img/input除外
+      - inline-block 让元素同时具备行内级、块级元素特征
+      - none 将 display 设置为 none 会将元素从 无障碍树 accessibility tree 中移除。这会导致该元素及其所有子代元素不再被屏幕阅读技术 screen reading technology 访问
+
+  -->
+  <div>THIS IS DIV</div>
+  <span>THIS IS SPAN</span>
+  <a href="#">THIS IS a</a>
+</body>
+</html>

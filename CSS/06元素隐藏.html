@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>元素隐藏</title>
+  <style>
+    .one {
+      display: none;
+    }
+    .two {
+      visibility: hidden
+    }
+    .three {
+      opacity: 0
+    }
+  </style>
+</head>
+<body>
+  <!-- 元素隐藏
+    1. display: none 
+      — 元素不显示也不占据空间
+
+    2. visibility: hidden 
+      - 元素不可见但会占据元素应该占据的空间
+
+    3. opacity: 0 
+      - 元素透明 会影响子元素 元素只是隐身了
+      - 它依旧存在页面中，它也同样影响用户交互。在读屏软件中会被识别。
+
+    4. rbga设置颜色 将a设置为0
+      -  元素透明 但不影响子元素
+  -->
+  <div>1</div>
+  <div class="one">display: none</div>
+  <div>2</div>
+  <div class="two">visibility: hidden</div>
+  <div>3</div>
+  <div class="three">opacity: 0</div>
+  <div>4</div>
+</body>
+</html>
