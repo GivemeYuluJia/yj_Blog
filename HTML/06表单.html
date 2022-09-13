@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>表单</title>
+</head>
+<body>
+  <!-- input 单行文本输入框、单选框、复选框、按钮 -->
+  <!-- readOnly只读 disabled禁用 checked默认被选中 autofoucs自动聚焦 name名字 value取值 -->
+  <div>
+    文本框输入(明文输入)
+    <input type="text" name="" id="">
+    文本框输入(密文输入)
+    <input type="password">
+    时间
+    <input type="time" name="" id="">
+    单选
+    <input type="radio" name="sex" value="man" id="">
+    重置
+    <input type="reset" value="重置">
+    提交表单数据给服务器
+    <input type="submit" value="提交">
+    file
+    <input type="file" name="" id="">
+  </div>
+
+  <!-- label 表单元素的标题 一般和input配合使用 -->
+  <!-- 可以和某个input绑定 点击label就可以激活对应input变成选中 -->
+  <label for="username">
+    用户: <input id="username" type="t">
+  </label>
+  <!-- textarea 多行文本框 -->
+  <!-- select、option 下拉选择框 -->
+  <!-- button 按钮 -->
+ 
+  <!-- <form>标签定义表单，表单有两个最重要的属性 -->
+  <!-- action属性，定义了表单提交的地址 -->
+  <!-- method属性，定义了表单提交的方式 -->
+  <!-- 表单有两种提交方式，get和post -->
+  <!-- 其他表单控件元素必须放在form标签的内部 -->
+</body>
+</html>
