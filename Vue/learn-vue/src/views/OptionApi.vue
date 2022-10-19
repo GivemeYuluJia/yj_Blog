@@ -1,6 +1,7 @@
 <script lang="ts">
   import OptionAttribute from '../components/Option/OptionAttribute.vue';
   import OptionEmit from '../components/Option/OPtionEmit.vue';
+  import LifeCycle from '../components/Option/LifeCycle.vue'
   export default {
     data: function () {
         /**
@@ -18,12 +19,14 @@
             info: {
                 name: "yj",
                 age: 18
-            }
+            },
+            visible: true
         };
     },
     components: {
       OptionAttribute,
-      OptionEmit
+      OptionEmit,
+      LifeCycle
     },
     /** 和计算属性区别：计算属性是有缓存的 基于依赖关系进行缓存 在数据不发生变化 计算属性不会重新计算 类似memo */
     methods: {
@@ -97,5 +100,9 @@
     <button @click="handleInfo">修改info</button>
     <p>name: {{info.name}} - age: {{info.age}}</p>
     <OptionAttribute name="yj" age="20" class="active" />
+    <button @click="() => visible = !visible">显示组件</button>
+    <template v-if="visible">
+        <LifeCycle />
+    </template>
   </div>
 </template>

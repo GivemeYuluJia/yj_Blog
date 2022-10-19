@@ -22,6 +22,11 @@ const router = createRouter({
       name: "directive",
       component: () => import("../views/Directive.vue"),
     },
+    {
+      path: "/refs",
+      name: "refs",
+      component: () => import("../views/RefsView.vue"),
+    },
   ],
 });
 
