@@ -22,9 +22,9 @@ export default {
       // 获取组件实例
       console.log(this.$refs.banner);
       // 获取组件中的元素
-      console.log(this.$refs.banner.$el);
+      console.log((this.$refs as any).banner.$el);
       // 访问组件中的方法
-      this.$refs.banner.bannerclick();
+      (this.$refs as any).banner.bannerclick();
     }
   }
 }

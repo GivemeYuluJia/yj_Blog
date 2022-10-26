@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory } from "vue-router";
-import OptionApi from "../views/OptionApi.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -7,7 +6,12 @@ const router = createRouter({
     {
       path: "/optionapi",
       name: "optionapi",
-      component: OptionApi,
+      component: import("../views/OptionApi.vue"),
+    },
+    {
+      path: "/compositionapi",
+      name: "compositionapi",
+      component: () => import("../views/CompositionApi.vue"),
     },
     {
       path: "/about",
@@ -26,6 +30,11 @@ const router = createRouter({
       path: "/refs",
       name: "refs",
       component: () => import("../views/RefsView.vue"),
+    },
+    {
+      path: "/keepalive",
+      name: "keepalive",
+      component: () => import("../views/KeepAliveView.vue"),
     },
   ],
 });

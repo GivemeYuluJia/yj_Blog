@@ -10,9 +10,11 @@ import { RouterLink, RouterView } from 'vue-router'
 
       <nav>
         <RouterLink to="/optionapi">Option Api</RouterLink>
+        <RouterLink to="/compositionapi">Composition Api</RouterLink>
         <RouterLink to="/about">About</RouterLink>
         <RouterLink to="/directive">Directive 指令</RouterLink>
         <RouterLink to="/refs">refs</RouterLink>
+        <RouterLink to="/keepalive">keep-alive</RouterLink>
       </nav>
     </div>
   </header>
