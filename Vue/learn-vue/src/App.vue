@@ -9,6 +9,12 @@ import { RouterLink, RouterView } from 'vue-router'
     <div class="wrapper">
 
       <nav>
+        <!--router-link
+          - to 是一个字符串 或是一个对象
+          - replace 设置replace属性 当点击时 会调用router.replace而不是router.push
+          - active-class 设置激活a元素后应用的class 默认为router-link-active
+          - exact-active-class 链接精准激活 应用于渲染a的class 默认router-link-exact-active
+        -->
         <RouterLink to="/optionapi">Option Api</RouterLink>
         <RouterLink to="/compositionapi">Composition Api</RouterLink>
         <RouterLink to="/about">About</RouterLink>
