@@ -21,6 +21,7 @@ import { RouterLink, RouterView } from 'vue-router'
         <RouterLink to="/directive">Directive 指令</RouterLink>
         <RouterLink to="/refs">refs</RouterLink>
         <RouterLink to="/keepalive">keep-alive</RouterLink>
+        <RouterLink to="/transition">transition</RouterLink>
       </nav>
     </div>
   </header>

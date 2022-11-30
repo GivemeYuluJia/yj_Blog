@@ -55,6 +55,11 @@ const router = createRouter({
       name: "keepalive",
       component: () => import("../views/KeepAliveView.vue"),
     },
+    {
+      path: "/transition",
+      name: "transition",
+      component: () => import("../views/Transition.vue"),
+    },
   ],
 });
 

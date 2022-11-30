@@ -1,5 +1,9 @@
 <template>
   <div>
+    <div>
+      <h2>Custom directive</h2> 
+      <input v-focus type="text" name="" id="">
+    </div>
     <!--template 元素可以当作不可见包裹元素 并且在v-if使用 最终template不会被渲染 -->
     <!-- 1. v-once 当前元素及其子元素只渲染一次 -->
     <div>
@@ -147,6 +151,16 @@
 import SlotNav from '../components/Slot/SlotNav.vue';
 import ScopeSlot from '../components/Slot/ScopeSlot.vue';
   export default {
+    // 局部指令 composition用法见composition
+    directives: {
+      focus: {
+        // 生命周期函数(自定义指令), 第二个参数是获取的绑定对象，内涵修饰符等变量
+        mounted(el, bindings) {
+          console.log(bindings, 'bindings')
+          el?.focus();
+        }
+      }
+    },
     data: function() {
       return {
         message: 'v-once',

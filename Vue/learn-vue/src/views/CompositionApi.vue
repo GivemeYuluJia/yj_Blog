@@ -1,5 +1,6 @@
 <template>
   <div>
+    <input v-focus type="text">
     123
     <Ref />
   </div>
@@ -7,6 +8,14 @@
 <script setup lang="ts">
 import Ref from '../components/Composition/Ref.vue';
 import { reactive } from 'vue';
+
+const vFocus = {
+  // 生命周期函数(自定义指令)
+  mounted(el, bindings) {
+    console.log(bindings, 'bindings')
+    el?.focus();
+  }
+};
 /**
  * watch 和 watchEffect
  *  - watch用于手动指定监听的数据源.
