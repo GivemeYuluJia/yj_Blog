@@ -1,0 +1,12 @@
+/* operations运算
+* 在less中 算术运算符+、-、*、/可以对任何数字、颜色或变量进行运算
+* 算术运算符在加减或比较之前会进行单位换算 计算结果以最左侧操作数的单位类型为准
+* 如果单位换算无效或失去意义 则忽略单位
+**/
+
+.operation {
+  width: 90px + 10em; // 只会对保留第一个单位，并不会转换单位
+  height: 50px * 2;
+  background-color: aquamarine;
+  margin-top: 3px * 2;
+}

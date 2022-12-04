@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container, .container1 {
+      overflow: auto;
+    }
+    .container1 {
+      width: 500px;
+      background-color: orange;
+    }
+    .box, .box1 {
+      width: 100px;
+      height: 100px;
+    }
+    .box {
+      margin-bottom: 30px;
+      background-color: blue;
+    }
+    .box1 {
+      margin-top: 20px;
+      margin-bottom: 30px;
+      background-color: rebeccapurple;
+    }
+    .item {
+      float: left;
+      width: 150px;
+      height: 50px;
+      background-color: rebeccapurple;
+    }
+  </style>
+</head>
+<body>
+  <!-- BFC块级格式化上下文 -->
+  <!--
+    以下情况会创建新的BFC
+      - 跟元素HTML
+      - 浮动元素 float不为none
+      - 绝对定位元素(元素的position为absolute或fixed)
+      - 行内块级元素(inline-block)
+      - 表格单元素
+      - overflow计算值不为visible的块元素
+      - 弹性元素
+      - 网格元素
+      - display值为flow-root的元素
+  -->
+  <!--
+    在BFC中 box会在垂直方向上一个挨着一个排布
+    垂直方向的间距由margin属性决定
+    在同一个BFC中 相邻两个box之间margin会折叠
+    在BFC中 每个元素左边紧挨着包含块的左边缘
+  -->
+  <!--作用一 解决折叠问题，让两个box为不同的BFC-->
+  <div class="container">
+    <div class="box"></div>
+  </div>
+  <div class="box1"></div>
+  <!--作用二 解决浮动塌陷问题-->
+  <div class="container1">
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+  </div>
+</body>
+</html>

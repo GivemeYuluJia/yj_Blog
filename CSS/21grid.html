@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container {
+      display: grid;
+      grid-template-columns: 100px 50px 100px;
+      grid-template-rows: repeat(2, 100px);
+    }
+    .item:nth-child(1) {
+      background-color: rebeccapurple;
+    }
+    .item:nth-child(2) {
+      background-color: blanchedalmond;
+    }
+    .item:nth-child(3) {
+      background-color: greenyellow;
+    }
+    .item:nth-child(4) {
+      background-color: blue;
+    }
+    .item:nth-child(5) {
+      background-color: whitesmoke;
+    }
+    .item:nth-child(6) {
+      background-color: rosybrown;
+    }
+  </style>
+</head>
+<body>
+  <!-- grid布局是一基于二维的布局系统 -->
+  <!--
+    grid container 设置为grid的盒子
+    grid item 单元格又称为grid cell 是grid container的直接子项(必须是直接子代)
+    grid line 构成网络结构的分割线；它们可以是垂直的(列网络线)或水平的(行网络线)
+    grid track 两条相邻网格线之间的空间；可以看成网格的行或列
+    grid area 由四条网格线包围的空间；一个网格区域可以由任意数量的网格单元组成
+  -->
+  <div class="container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+  </div>  
+</body>
+</html>

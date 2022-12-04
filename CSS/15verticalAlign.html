@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .box {
+    background-color: orange;
+  }
+  img {
+    vertical-align: top;
+    width: 150px;
+    height: 150px;
+  }
+  .small {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+  }
+</style>
+<body>
+  <!--
+    一个div没有设置高度 若没有内容就没有高度，有内容内容撑起高度。
+    内容有行高撑起高度。
+    行内元素集于baseline基线对齐
+
+    vertical-align
+      - baseline(默认) 基线对齐
+      - top 把行内级盒子的顶部和line boxes顶部对齐
+      - middle 行内集盒子的中心点与父盒基线加上x-heigh一半线对齐
+      - bottom 把行内级盒子底部和line boxes底部对齐
+      - <percentage> 把行内级盒子提升或下降一段距离(距离相当于line-height计算\元素高度)  0%意味同baseline一样
+      - <length> 把行内级盒子提升或下降一段距离 0cm意味同baseline一样
+
+    解决图片下边缘间隙问题 1.设置为top/middle/bottom； 2.将图片设置为block元素
+  -->
+  <div class="box">
+    普通的文本
+    <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.dtstatic.com%2Fuploads%2Fblog%2F202103%2F31%2F20210331160001_9a852.thumb.1000_0.jpg&refer=http%3A%2F%2Fc-ssl.dtstatic.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1672547541&t=de25b6f8f44e8949f0f0bf9030fa3e7e" alt="">
+    <span class="small">xxxxx</span>
+  </div>
+</body>
+</html>

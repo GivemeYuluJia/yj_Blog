@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container {
+      border: 1px solid blue;
+      
+    }
+    .box {
+      position: relative;
+      left: -10px;
+      width: 200px;
+      height: 50px;
+      background-color: orange;
+      transition: all 1s ease-in 1s;
+    }
+    .container:hover .box {
+      left: 100px;
+      transform: translate(100px);
+      width: 500px;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    transition是过渡 更多表示过渡的过程
+    局限性
+      - 只能定义开始和结束状态，不能定义中间状态，也就是只有两个状态
+      - 不能重复执行 除非一再触发动画
+      - 需要在特定状态下触发才能执行 比如某个属性被修改
+  -->
+  <div class="container">
+    <div class="box"></div>
+  </div>
+</body>
+</html>

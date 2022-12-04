@@ -1,0 +1,46 @@
+@import url(./less/1_varibles.less);
+@import url(./less/2_Operations.less);
+@import url(./less/3_Mixins.less);
+/* 1. nesting(嵌套)
+*  之前项目中需要找到一个内层元素，往往需要嵌套很多层选择器
+*   scss/less提供嵌套选择器 
+*   特殊符号 & 表示当前选择器的父级
+*/
+/*
+*  2. less提供许多内置函数如color、convert、ceil等等
+*/
+/* 3. 作用域scope 在查找一个变量时候 现在本地查找变量和混合；如果找不到 则从"父"级作用域继承
+*/
+/* 4. 导入import 导入方式和css用法一致；导入一个.less文件，此文件中所有变量都可以使用；如果导入文件是.less扩展名，则可以将扩展名省略 */
+.box {
+  font-size: @smalllFontSize;
+}
+
+.box {
+  > p {
+    font-size: @bigFontSize;
+    color: @mainColor;
+  }
+  > h1 {
+    font-size: @normalFontSize;
+    &:hover {
+      font-size: @bigFontSize;
+      color: @mainColor;
+    }
+  }
+}
+
+.list {
+  .item {
+    font-size: 20px;
+    &:nth-child(1) {
+      color: rebeccapurple;
+    }
+    &:nth-child(2) {
+      color: #00f;
+    }
+    &:hover {
+      color: @mainColor;
+    }
+  }
+}

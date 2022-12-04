@@ -5,6 +5,60 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Float</title>
+  <style>
+    body {
+      background-color: #f2f2f2;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    a {
+      text-decoration: none;
+      color: #333;
+    }
+    ul > li {
+      float: left;
+      margin-left: 12px;
+    }
+    ul > li > a {
+      display: block;
+      width: 36px;
+      height: 36px;
+      font-size: 14px;
+      text-align: center;
+      line-height: 36px;
+      border-radius: 6px;
+      background-color: #fff;
+    }
+    ul > li > a:hover, ul > li.active > a  {
+      background-color: blue;
+      color: #fff;
+    }
+    ul > li:nth-last-child(1) > a {
+      width: 80px;
+    }
+
+    .content {
+      width: 1190px;
+      margin: 0 auto;
+      background-color: orange;
+      height: 800px;
+    }
+    .box {
+      margin-right: -10px;
+    }
+    .item {
+      width: 230px;
+      height: 322px;
+      background-color: purple;
+      color: #fff;
+
+      float: left;
+      margin-right: 10px;
+    }
+  </style>
 </head>
 <body>
   <!-- Float属性可以指定一个元素应沿着其容器左侧或右侧放置 允许文本和内联元素环绕它 -->
@@ -15,5 +69,41 @@
     3. 如果水平方向剩余的空间不够显示浮动元素 浮动元素将下移动 直到有充足的空间为止
     4. 浮动元素不能和行内级内容层叠 行内级内容将会被浮动元素推出
   -->
+  <!--
+      清浮动 对浮动父元素:after伪元素设置 
+      content: "";
+      clear: both
+      display: block
+  -->
+  <div style="height: 150px">
+    <h1>练习一</h1>
+    <ul>
+      <li class="active"><a href="">1</a></li>
+      <li><a href="">2</a></li>
+      <li><a href="">3</a></li>
+      <li><a href="">4</a></li>
+      <li><a href="">5</a></li>
+      <li><a href="">6</a></li>
+      <li><a href="">7</a></li>
+      <li><a href="">下一页 &gt;</a></li>
+    </ul>
+  </div>
+  <div>
+    <h1>练习二</h1>
+    <div class="content">
+      <div class="box">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+      </div>
+      <!-- <div class="item">6</div>
+      <div class="item">7</div>
+      <div class="item">8</div>
+      <div class="item">9</div>
+      <div class="item">10</div> -->
+    </div>
+  </div>
 </body>
 </html>

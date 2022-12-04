@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 结合@import是可以和媒体查询结合使用*/
+    @import url() (max-width: 800px);
+    @media screen and (max-width: 800px) {
+      body {
+        background-color: orange;
+      }
+    }
+  </style>
+  <!-- 结合link支持媒体查询 -->
+  <link rel="stylesheet" media="(max-width: 800px)" href="">
+</head>
+<body>
+  <!-- 媒体查询是一种提供开发者针对不同设备需求进行定制化开发的一个接口；可以根据设备类型(比如屏幕设备、打印机等)或特定的特性(屏幕宽度)来修改页面 -->
+  <!-- 媒体类型
+    all 适用于所有设备
+    print 适用于打印预览模式下屏幕上查看的分页材料和文档
+    screen 主要用于屏幕
+    speech 主要用于语音合成器
+  -->
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    html {
+      /* 定义一个变量 只有后代元素才能使用 */
+      --main-color: #f3c258
+    }
+    img {
+      width: 100px;
+      height: 100px;
+    }
+    .img1 {
+      filter: blur(3px);
+    }
+    .box {
+      color: var(--main-color);
+    }
+    .box2 {
+      filter: blur(3px);
+    }
+    .box3 {
+      width: 200px;
+      height: 100px;
+      background-image: linear-gradient(to right top, red, blue);
+    }
+    .box4 {
+      width: 200px;
+      height: 100px;
+      background-image: radial-gradient(at 0% 50%, red, blue);
+    }
+  </style>
+</head>
+<body>
+  <!--
+    之前有用到rgb/rgba/translate/rotate/scale等
+    css函数通常可以帮我们更加灵活的编写样式的值
+
+    var 使用css定义变量
+      - 自定义属性需要以两个减号(--)开始； 属性值可以是任何有效cs值
+    calc 计算css值 通常用于计算元素大小或位置
+    blur 模糊效果
+      - 通常和filter:将模糊或颜色偏移等图形效果应用于元素/backdrop-filter:为元素后面的区域添加模糊或其他效果 一起使用
+    gradient 颜色渐变函数；是一种css数据类型的子类型，用于表现两种或多种颜色的过渡转变
+      - line-gradient() 创建一个表示两种或多种颜色线性渐变的图片
+      - radial-gradient() 创建一个图像 该图像是由从原点出发的两种或多种颜色逐步过渡组成
+      - repeating-linear-gradient() 创建一个由重复线性渐变组成的image
+      - repeating-radial-gradient() 创建一个重复的原点触发渐变组成的image
+
+  -->
+  <div class="box">hello</div>
+  <img class="img1" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.dtstatic.com%2Fuploads%2Fblog%2F202103%2F31%2F20210331160001_9a852.thumb.1000_0.jpg&refer=http%3A%2F%2Fc-ssl.dtstatic.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1672547541&t=de25b6f8f44e8949f0f0bf9030fa3e7e" alt="">
+  <div class="box2">
+    <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.dtstatic.com%2Fuploads%2Fblog%2F202103%2F31%2F20210331160001_9a852.thumb.1000_0.jpg&refer=http%3A%2F%2Fc-ssl.dtstatic.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1672547541&t=de25b6f8f44e8949f0f0bf9030fa3e7e" alt="">
+  </div>
+  <div class="box3"></div>
+  <div class="box4"></div>
+</body>
+</html>

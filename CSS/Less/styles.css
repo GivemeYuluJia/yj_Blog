@@ -1,0 +1,71 @@
+/* operations运算
+* 在less中 算术运算符+、-、*、/可以对任何数字、颜色或变量进行运算
+* 算术运算符在加减或比较之前会进行单位换算 计算结果以最左侧操作数的单位类型为准
+* 如果单位换算无效或失去意义 则忽略单位
+**/
+.operation {
+  width: 100px;
+  height: 100px;
+  background-color: aquamarine;
+  margin-top: 6px;
+}
+/*
+* 在原来css编写中 多个选择器中可能会有大量相同的代码
+* 我们希望可以将这些代码进行抽取到一个独立的地方，任何选择器都可以进行复用
+* 在less中提供混入（Mixins）来帮助完成这些操作
+*/
+.nowrap_ellipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.box1_size {
+  width: 150px;
+  height: 50px;
+}
+.box1 {
+  width: 150px;
+  background-color: #0f0;
+  margin-top: 10px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  border: 5px solid purple;
+}
+/* 1. nesting(嵌套)
+*  之前项目中需要找到一个内层元素，往往需要嵌套很多层选择器
+*   scss/less提供嵌套选择器 
+*   特殊符号 & 表示当前选择器的父级
+*/
+/*
+*  2. less提供许多内置函数如color、convert、ceil等等
+*/
+/* 3. 作用域scope 在查找一个变量时候 现在本地查找变量和混合；如果找不到 则从"父"级作用域继承
+*/
+/* 4. 导入import 导入方式和css用法一致；导入一个.less文件，此文件中所有变量都可以使用；如果导入文件是.less扩展名，则可以将扩展名省略 */
+.box {
+  font-size: 12px;
+}
+.box > p {
+  font-size: 18px;
+  color: #f3c258;
+}
+.box > h1 {
+  font-size: 14px;
+}
+.box > h1:hover {
+  font-size: 18px;
+  color: #f3c258;
+}
+.list .item {
+  font-size: 20px;
+}
+.list .item:nth-child(1) {
+  color: rebeccapurple;
+}
+.list .item:nth-child(2) {
+  color: #00f;
+}
+.list .item:hover {
+  color: #f3c258;
+}

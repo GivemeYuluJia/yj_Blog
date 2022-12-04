@@ -1,0 +1,27 @@
+/*
+* 在原来css编写中 多个选择器中可能会有大量相同的代码
+* 我们希望可以将这些代码进行抽取到一个独立的地方，任何选择器都可以进行复用
+* 在less中提供混入（Mixins）来帮助完成这些操作
+*/
+
+.nowrap_ellipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+// 混入可以传递参数(定义变量)的
+.box1_border(@borderWidth: 5px, @borderColor: purple) {
+  border: @borderWidth solid @borderColor;
+}
+// 混合和映射结合使用  弥补less中不能自定义函数的缺陷
+.box1_size {
+  width: 150px;
+  height: 50px;
+}
+.box1 {
+  width: .box1_size()[width];
+  background-color: #0f0;
+  margin-top: 10px;
+  .nowrap_ellipsis();
+  .box1_border();
+}

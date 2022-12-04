@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 1. 语义化标签 
+    解决过往过多的使用div，通过id或class来区分元素；对于浏览器来说这些元素不够语义化；对于搜索引擎来说，不利于SEO的优化
+  -->
+  <!-- header 头部元素 -->
+  <header>header</header>
+  <!-- nav 导航元素 -->
+  <nav>nav</nav>
+  <!-- section 定义文档某个区域的元素 -->
+  <section>
+    <!-- article 内容元素 -->
+    <article>article</article>
+  </section>
+  <!-- aside 侧边栏元素 -->
+  <aside>aside</aside>
+  <!-- footer 尾部元素 -->
+  <footer>footer</footer>
+
+  <!-- 2. 新增媒体类型支持 ——音频<audios>/视频<video> 
+    使用方式1.直接通过元素使用；2.通过javascript的api对其进行控制
+    - video元素用于在html和xhtml文档中嵌入媒体播放器
+      1. src：url地址(视频播放的url地址)
+      2. controls：是否现实控制拦(包含音量、跨帧、暂停/播放)
+      3. autoplay：是否视频自动播放(某些浏览器需要加muted 如chrome)
+      4. muted：是否静音播放
+      5. preload：是都需要预加载视频 metadata表示预加载元数据(比如视频时长等)
+      6. poster：海报帧的url
+    在video元素中间内容是针对浏览器不支持此元素时候的降级处理
+      - 通过source元素制定更多视频格式源
+      - 通过p/div等元素指定浏览器不支持video元素的情况，显示的内容
+  -->
+
+  <!-- 3. input元素内容扩展
+      - placeholder：输入框的展位文字
+      - multiple：多个值
+      - autofocus：自动聚焦
+      - type也新增许多类型：data/time/number/tel/color/email等
+  -->
+
+  <!-- 4. 新增全局属性data- *
+    用于自定义数据属性；data设置的属性可以在javascript的dom操作中通过dataset轻松获取；用于html和javascript数据之间的传递。
+  -->
+  <div data-yj="yj">4. data- </div>
+</body>
+</html>
