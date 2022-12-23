@@ -9,6 +9,9 @@ if (NODE_ENV === 'development') {
 } 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // images: {
+  //   domains: ['image.baidu.com']
+  // },
   env: {
     NEXT_PUBLCI_SESSION_COOKIE_NAME: COOKIE_NAME,
     NEXT_PUBLCI_SESSION_PASSWORD: SESSION_PASSWORD
